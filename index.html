@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Cómo te sientes? - Información y Servicios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        header {
+            background-color: #4B0082;
+            color: #fff;
+            width: 100%;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .content {
+            max-width: 800px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .content h2 {
+            color: #4B0082;
+        }
+        .services, .plans {
+            margin-top: 20px;
+        }
+        .services h3, .plans h3 {
+            color: #4B0082;
+        }
+        .service, .plan {
+            background-color: #f9f9ff;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .button {
+            background-color: #4B0082;
+            color: #fff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #6A0DAD;
+        }
+        /* Estilos Responsivos */
+        @media (max-width: 768px) {
+            .content {
+                padding: 15px;
+            }
+            .service, .plan {
+                padding: 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            header {
+                padding: 15px 0;
+            }
+            .content {
+                margin: 10px;
+                padding: 10px;
+            }
+            .button {
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>¿Cómo te sientes?</h1>
+    </header>
+    <div class="content">
+        <h2>Bienvenido a nuestra plataforma de apoyo emocional</h2>
+        <p>
+            En <strong>¿Cómo te sientes?</strong> nos dedicamos a ofrecer apoyo psicológico tanto a pacientes como a profesionales.
+            Nuestro objetivo es crear un espacio seguro y accesible donde puedas encontrar la ayuda que necesitas.
+        </p>
+        <div class="services">
+            <h3>Nuestros Servicios</h3>
+            <div class="service">
+                <h4>Asesoramiento Psicológico</h4>
+                <p>Ofrecemos sesiones de asesoramiento psicológico para ayudarte a gestionar tus emociones y mejorar tu bienestar mental.</p>
+            </div>
+            <div class="service">
+                <h4>Consultas con Psicólogos Especializados</h4>
+                <p>Consulta con psicólogos especializados en diversas áreas, como ansiedad, depresión, TCA, TDAH y TOC.</p>
+            </div>
+            <div class="service">
+                <h4>Recursos Educativos</h4>
+                <p>Accede a una amplia gama de recursos educativos para entender mejor tu condición y aprender a manejarla.</p>
+            </div>
+            <div class="service">
+                <h4>Seguimiento Personalizado</h4>
+                <p>Disfruta de un seguimiento personalizado y adaptado a tus necesidades específicas para garantizar tu progreso.</p>
+            </div>
+        </div>
+        <div class="plans">
+            <h3>Nuestros Planes</h3>
+            <div class="plan">
+                <h4>Plan Básico</h4>
+                <p>Acceso a recursos educativos y seguimiento básico por parte de nuestros psicólogos.</p>
+            </div>
+            <div class="plan">
+                <h4>Plan Estándar</h4>
+                <p>Incluye sesiones de asesoramiento psicológico y acceso a recursos educativos.</p>
+            </div>
+            <div class="plan">
+                <h4>Plan Premium</h4>
+                <p>Acceso ilimitado a consultas con psicólogos especializados, recursos educativos y seguimiento personalizado.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
