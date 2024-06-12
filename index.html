@@ -18,15 +18,33 @@
             justify-content: center;
             min-height: 100vh;
             text-align: center;
+            transition: opacity 1s;
         }
         header {
             background-color: #4B0082;
             color: #fff;
             width: 100%;
             padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         header h1 {
             margin: 0;
+        }
+        .switch {
+            background-color: white;
+            color: #4B0082;
+            border: 1px solid #4B0082;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .switch:hover {
+            background-color: #4B0082;
+            color: white;
         }
         .content {
             max-width: 800px;
@@ -63,7 +81,7 @@
             transition: background-color 0.3s;
         }
         .button:hover {
-            background-color: #6A0DAD;
+            background-color: #350065;
         }
         /* Estilos Responsivos */
         @media (max-width: 768px) {
@@ -87,51 +105,49 @@
             }
         }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.style.opacity = '1';
+        });
+
+        function transitionToPage(pageUrl) {
+            document.body.style.opacity = '0';
+            setTimeout(function() {
+                window.location.href = pageUrl;
+            }, 1000);
+        }
+    </script>
 </head>
 <body>
     <header>
         <h1>¿Cómo te sientes?</h1>
+        <a href="javascript:void(0)" class="switch" onclick="transitionToPage('nextpage.html')">Ir a Bistro Brussels</a>
     </header>
     <div class="content">
-        <h2>Bienvenido a nuestra plataforma de apoyo emocional</h2>
-        <p>
-            En <strong>¿Cómo te sientes?</strong> nos dedicamos a ofrecer apoyo psicológico tanto a pacientes como a profesionales.
-            Nuestro objetivo es crear un espacio seguro y accesible donde puedas encontrar la ayuda que necesitas.
-        </p>
-        <div class="services">
-            <h3>Nuestros Servicios</h3>
+        <h2>Servicios y Planes</h2>
+        <section class="services">
+            <h3>Servicios</h3>
             <div class="service">
-                <h4>Asesoramiento Psicológico</h4>
-                <p>Ofrecemos sesiones de asesoramiento psicológico para ayudarte a gestionar tus emociones y mejorar tu bienestar mental.</p>
+                <h4>Consulta General</h4>
+                <p>Obtén una evaluación integral de tu salud mental a través de una consulta general con nuestros especialistas.</p>
             </div>
             <div class="service">
-                <h4>Consultas con Psicólogos Especializados</h4>
-                <p>Consulta con psicólogos especializados en diversas áreas, como ansiedad, depresión, TCA, TDAH y TOC.</p>
+                <h4>Terapia Personalizada</h4>
+                <p>Accede a sesiones de terapia adaptadas a tus necesidades específicas para ayudarte a superar tus desafíos personales.</p>
             </div>
-            <div class="service">
-                <h4>Recursos Educativos</h4>
-                <p>Accede a una amplia gama de recursos educativos para entender mejor tu condición y aprender a manejarla.</p>
-            </div>
-            <div class="service">
-                <h4>Seguimiento Personalizado</h4>
-                <p>Disfruta de un seguimiento personalizado y adaptado a tus necesidades específicas para garantizar tu progreso.</p>
-            </div>
-        </div>
-        <div class="plans">
-            <h3>Nuestros Planes</h3>
+        </section>
+        <section class="plans">
+            <h3>Planes</h3>
             <div class="plan">
                 <h4>Plan Básico</h4>
-                <p>Acceso a recursos educativos y seguimiento básico por parte de nuestros psicólogos.</p>
-            </div>
-            <div class="plan">
-                <h4>Plan Estándar</h4>
-                <p>Incluye sesiones de asesoramiento psicológico y acceso a recursos educativos.</p>
+                <p>Incluye una consulta inicial y seguimiento mensual para monitorear tu progreso.</p>
             </div>
             <div class="plan">
                 <h4>Plan Premium</h4>
-                <p>Acceso ilimitado a consultas con psicólogos especializados, recursos educativos y seguimiento personalizado.</p>
+                <p>Accede a consultas ilimitadas y recursos adicionales para mejorar tu bienestar.</p>
             </div>
-        </div>
+        </section>
+        <a href="javascript:void(0)" class="button">Conoce Más</a>
     </div>
 </body>
 </html>
